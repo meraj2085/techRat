@@ -95,14 +95,14 @@ const Header = () => {
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-brand-github"
+                        className="icon icon-tabler icon-tabler-brand-github"
                         width="20"
                         height="20"
                         viewBox="0 0 24 24"
-                        stroke-width="2"
+                        strokeWidth="2"
                         stroke="currentColor"
                         fill="none"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                       >
                         <path
@@ -116,9 +116,11 @@ const Header = () => {
                     Login
                   </button>
                 )}
-                <button className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
-                  PC Build
-                </button>
+                <Link href="/pcBuild">
+                  <button className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
+                    PC Build
+                  </button>
+                </Link>
               </div>
 
               <div className="block md:hidden">

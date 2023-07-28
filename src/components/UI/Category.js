@@ -3,12 +3,37 @@ import CategoryCard from "../Shared/CategoryCard";
 
 const Category = () => {
   const Categories = [
-    { id: 1, name: "CPU / Processor", value: "CPU / Processor" },
-    { id: 2, name: "Motherboard", value: "Motherboard" },
-    { id: 3, name: "RAM", value: "RAM" },
-    { id: 4, name: "Power Supply Unit", value: "Power Supply Unit" },
-    { id: 5, name: "Storage Device", value: "Storage Device" },
-    { id: 6, name: "Monitor", value: "Monitor" },
+    {
+      id: 1,
+      name: "CPU / Processor",
+      value: "CPU / Processor",
+      image_url: "/images/cpu.png",
+    },
+    {
+      id: 2,
+      name: "Motherboard",
+      value: "Motherboard",
+      image_url: "/images/motherboard.png",
+    },
+    { id: 3, name: "RAM", value: "RAM", image_url: "/images/ram.png" },
+    {
+      id: 4,
+      name: "Power Supply Unit",
+      value: "Power Supply Unit",
+      image_url: "/images/power.png",
+    },
+    {
+      id: 5,
+      name: "Storage Device",
+      value: "Storage Device",
+      image_url: "/images/storage.png",
+    },
+    {
+      id: 6,
+      name: "Monitor",
+      value: "Monitor",
+      image_url: "/images/monitor.png",
+    },
   ];
   return (
     <section className="bg-white  my-10">
