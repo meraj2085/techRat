@@ -4,7 +4,7 @@ import DroneImg from "@/assets/images/undraw_drone.png";
 
 const ProductCard = () => {
   return (
-    <div className="w-full overflow-hidden bg-white rounded-lg shadow-lg min-h-96">
+    <div className="w-full overflow-hidden bg-white rounded-lg shadow-lg transition hover:shadow-xl min-h-96">
       <Image
         className="object-cover object-center w-full h-56"
         src={DroneImg}
