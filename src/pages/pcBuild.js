@@ -73,58 +73,117 @@ const PcBuild = () => {
 
               <div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
                 <div className="w-screen max-w-lg space-y-4">
-                  <dl className="space-y-0.5 text-sm text-gray-700">
-                    <div className="flex justify-between">
-                      <dt>Subtotal</dt>
-                      <dd>£250</dd>
+                  <div className="space-y-0.5 text-sm text-gray-700 flex flex-col gap-2">
+                    <div className="flex items-center gap-4 justify-between border rounded-md px-4 py-2">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-affiliate-filled"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M18.5 3a2.5 2.5 0 1 1 -.912 4.828l-4.556 4.555a5.475 5.475 0 0 1 .936 3.714l2.624 .787a2.5 2.5 0 1 1 -.575 1.916l-2.623 -.788a5.5 5.5 0 0 1 -10.39 -2.29l-.004 -.222l.004 -.221a5.5 5.5 0 0 1 2.984 -4.673l-.788 -2.624a2.498 2.498 0 0 1 -2.194 -2.304l-.006 -.178l.005 -.164a2.5 2.5 0 1 1 4.111 2.071l.787 2.625a5.475 5.475 0 0 1 3.714 .936l4.555 -4.556a2.487 2.487 0 0 1 -.167 -.748l-.005 -.164l.005 -.164a2.5 2.5 0 0 1 2.495 -2.336z"
+                            stroke-width="0"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div className="text-end">
+                        <p className=" text-gray-900 text-lg">
+                          ICH Pro Motherboard
+                        </p>
+                        <p>Price: £100</p>
+                        <p>Category: Ram</p>
+                      </div>
                     </div>
-
-                    <div className="flex justify-between">
-                      <dt>VAT</dt>
-                      <dd>£25</dd>
+                    <div className="flex items-center gap-4 justify-between border rounded-md px-4 py-2">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-affiliate-filled"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M18.5 3a2.5 2.5 0 1 1 -.912 4.828l-4.556 4.555a5.475 5.475 0 0 1 .936 3.714l2.624 .787a2.5 2.5 0 1 1 -.575 1.916l-2.623 -.788a5.5 5.5 0 0 1 -10.39 -2.29l-.004 -.222l.004 -.221a5.5 5.5 0 0 1 2.984 -4.673l-.788 -2.624a2.498 2.498 0 0 1 -2.194 -2.304l-.006 -.178l.005 -.164a2.5 2.5 0 1 1 4.111 2.071l.787 2.625a5.475 5.475 0 0 1 3.714 .936l4.555 -4.556a2.487 2.487 0 0 1 -.167 -.748l-.005 -.164l.005 -.164a2.5 2.5 0 0 1 2.495 -2.336z"
+                            stroke-width="0"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div className="text-end">
+                        <p className=" text-gray-900 text-lg">
+                          ICH Pro Motherboard
+                        </p>
+                        <p>Price: £100</p>
+                        <p>Category: Ram</p>
+                      </div>
                     </div>
-
-                    <div className="flex justify-between">
-                      <dt>Discount</dt>
-                      <dd>-£20</dd>
+                    <div className="flex items-center gap-4 justify-between border rounded-md px-4 py-2">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-affiliate-filled"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M18.5 3a2.5 2.5 0 1 1 -.912 4.828l-4.556 4.555a5.475 5.475 0 0 1 .936 3.714l2.624 .787a2.5 2.5 0 1 1 -.575 1.916l-2.623 -.788a5.5 5.5 0 0 1 -10.39 -2.29l-.004 -.222l.004 -.221a5.5 5.5 0 0 1 2.984 -4.673l-.788 -2.624a2.498 2.498 0 0 1 -2.194 -2.304l-.006 -.178l.005 -.164a2.5 2.5 0 1 1 4.111 2.071l.787 2.625a5.475 5.475 0 0 1 3.714 .936l4.555 -4.556a2.487 2.487 0 0 1 -.167 -.748l-.005 -.164l.005 -.164a2.5 2.5 0 0 1 2.495 -2.336z"
+                            stroke-width="0"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div className="text-end">
+                        <p className=" text-gray-900 text-lg">
+                          ICH Pro Motherboard
+                        </p>
+                        <p>Price: £100</p>
+                        <p>Category: Ram</p>
+                      </div>
                     </div>
-
-                    <div className="flex justify-between !text-base font-medium">
-                      <dt>Total</dt>
-                      <dd>£200</dd>
-                    </div>
-                  </dl>
-
-                  <div className="flex justify-end">
-                    <span className="inline-flex items-center justify-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-indigo-700">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="-ms-1 me-1.5 h-4 w-4"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"
-                        />
-                      </svg>
-
-                      <p className="whitespace-nowrap text-xs">
-                        2 Discounts Applied
-                      </p>
-                    </span>
                   </div>
-
                   <div className="flex justify-end">
-                    <a
-                      href="#"
+                    <button
+                      disabled
                       className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
                     >
-                      Checkout
-                    </a>
+                      Complete Build
+                    </button>
                   </div>
                 </div>
               </div>
@@ -141,3 +200,4 @@ export default PcBuild;
 PcBuild.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
+
