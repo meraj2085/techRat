@@ -1,9 +1,16 @@
 import { signIn, useSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser, setLoading } from "../../redux/features/user/userSlice";
 
 const Header = () => {
   const { data: session } = useSession();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+  // dispatch(setUser("example@example.com"));
+
+  // console.log(user, "testingbro");
   return (
     <header className="bg-white mb-6">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
