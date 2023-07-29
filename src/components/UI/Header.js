@@ -152,7 +152,7 @@ const Header = () => {
                 )}
               </div>
 
-              <div className="block md:hidden">
+              {/* <div className="block md:hidden">
                 <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -169,6 +169,56 @@ const Header = () => {
                     />
                   </svg>
                 </button>
+              </div> */}
+              <div className="dropdown dropdown-end block md:hidden">
+                <label tabIndex={0}>
+                  <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                  </button>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-2 mt-3 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <Link
+                      className="text-gray-500 transition hover:text-gray-500/75"
+                      href="/"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  {Categories.map((category) => (
+                    <Link
+                      key={category?.id}
+                      href={`/featured/${category.value}`}
+                    >
+                      <li>
+                        <p>{category.name}</p>
+                      </li>
+                    </Link>
+                  ))}
+                  {session?.user?.email && (
+                    <li onClick={() => signOut()}>
+                      <p className="text-gray-500 transition hover:text-gray-500/75">
+                        Sign Out
+                      </p>
+                    </li>
+                  )}
+                </ul>
               </div>
             </div>
           </div>
