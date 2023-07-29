@@ -34,7 +34,7 @@ Home.getLayout = function getLayout(page) {
 // };
 
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:8000/api/v1/products/random");
+  const res = await fetch("https://techrat-backend.vercel.app/api/v1/products/random");
   const data = await res.json();
   return {
     props: {

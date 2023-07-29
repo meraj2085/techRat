@@ -52,7 +52,7 @@ ProductDetails.getLayout = function getLayout(page) {
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:8000/api/v1/products/single/${params.productId}`
+    `https://techrat-backend.vercel.app/api/v1/products/single/${params.productId}`
   );
   const data = await res.json();
 
