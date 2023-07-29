@@ -1,4 +1,5 @@
 ### Live link: https://techrat.vercel.app/
+### Frontend: https://github.com/meraj2085/techRat
 
 ### How to run the project locally
 1. Clone the repository
