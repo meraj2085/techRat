@@ -3,7 +3,8 @@ import React from "react";
 import DroneImg from "@/assets/images/undraw_drone.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setPcBuild } from "@/redux/features/user/userSlice";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
+import { toast } from "react-hot-toast";
 
 const ProductDetailsCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -12,7 +13,8 @@ const ProductDetailsCard = ({ product }) => {
 
   const handlePcBuild = () => {
     dispatch(setPcBuild(product));
-    router.push('/pcBuild');
+    router.push("/pcBuild");
+    toast.success("Added to build!");
   };
 
   // console.log(reduxState.products, "testingbro");

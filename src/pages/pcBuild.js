@@ -2,6 +2,7 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { toast } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
 const PcBuild = () => {
@@ -39,6 +40,9 @@ const PcBuild = () => {
     },
   ];
   const reduxState = useSelector((state) => state.user);
+  const handleBuildComplete = () => {
+    toast.success("Build Completed");
+  };
   return (
     <div className="min-h-screen">
       <section>
@@ -119,7 +123,8 @@ const PcBuild = () => {
                   </div>
                   <div className="flex justify-end">
                     <button
-                      disabled
+                      onClick={handleBuildComplete}
+                      // disabled
                       className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
                     >
                       Complete Build
