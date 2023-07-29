@@ -26,4 +26,4 @@ const FeaturedProduct = () => {
   );
 };
 
-export default Featured;
+export default FeaturedProduct;

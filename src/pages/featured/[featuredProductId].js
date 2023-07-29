@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "@/components/Shared/ProductCard";
 import RootLayout from "@/components/Layouts/RootLayout";
 
-const FeaturedProduct = () => {
+const FeaturedProduct = ({ products }) => {
   return (
     <section className="bg-white  my-10">
       <div className="container px-6 py-10 mx-auto">
@@ -18,8 +18,8 @@ const FeaturedProduct = () => {
 
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-3 xl:grid-cols-3">
           {/* {isLoading && [1, 2, 3, 4].map((n) => <SkeletonCard key={n} />)} */}
-          {[1, 2, 3].map((product) => (
-            <ProductCard key={product} />
+          {products?.data?.map((product) => (
+            <ProductCard key={product?._id} product={product} />
           ))}
         </div>
       </div>
@@ -31,4 +31,18 @@ export default FeaturedProduct;
 
 FeaturedProduct.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
+};
+
+export const getServerSideProps = async (context) => {
+  const { params } = context;
+  const res = await fetch(
+    `http://localhost:8000/api/v1/products/${params.featuredProductId}`
+  );
+  const data = await res.json();
+
+  return {
+    props: {
+      products: data,
+    },
+  };
 };
