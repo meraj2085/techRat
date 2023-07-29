@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { toast } from "react-hot-toast";
 import { useSelector } from "react-redux";
+import air_support from "@/assets/images/air_support.png";
 
 const PcBuild = () => {
   const Categories = [
@@ -41,7 +42,12 @@ const PcBuild = () => {
   ];
   const reduxState = useSelector((state) => state.user);
   const handleBuildComplete = () => {
-    toast.success("Build Completed");
+    if (reduxState?.products?.length === 6) {
+      toast.success("Build Completed");
+      return;
+    } else {
+      toast.error("Please select all components");
+    }
   };
   return (
     <div className="min-h-screen">
@@ -89,7 +95,7 @@ const PcBuild = () => {
                         className="flex items-center gap-4 justify-between border rounded-md px-4 py-2"
                       >
                         <div>
-                          <svg
+                          {/* <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="icon icon-tabler icon-tabler-affiliate-filled"
                             width="40"
@@ -111,12 +117,19 @@ const PcBuild = () => {
                               strokeWidth="0"
                               fill="currentColor"
                             ></path>
-                          </svg>
+                          </svg> */}
+                          <Image
+                            className="object-cover object-center"
+                            src={air_support}
+                            width={80}
+                            height={80}
+                            alt="avatar"
+                          />
                         </div>
                         <div className="text-end">
                           <p className=" text-gray-900 text-lg">{item?.name}</p>
                           <p>Price: £{item?.price}</p>
-                          <p>Category: {item?.category}</p>
+                          <p>Category: {item?.category_name}</p>
                         </div>
                       </div>
                     ))}
@@ -124,7 +137,7 @@ const PcBuild = () => {
                   <div className="flex justify-end">
                     <button
                       onClick={handleBuildComplete}
-                      // disabled
+                      disabled={reduxState?.products?.length !== 6}
                       className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
                     >
                       Complete Build

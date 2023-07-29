@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import DroneImg from "@/assets/images/undraw_drone.png";
+import air_support from "@/assets/images/air_support.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setPcBuild } from "@/redux/features/user/userSlice";
 import { useRouter } from "next/router";
@@ -23,7 +24,7 @@ const ProductDetailsCard = ({ product }) => {
     <div className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg transition hover:shadow-xl min-h-96">
       <Image
         className="object-cover object-center w-full h-56"
-        src={DroneImg}
+        src={air_support}
         alt="avatar"
       />
 
@@ -32,7 +33,7 @@ const ProductDetailsCard = ({ product }) => {
           {product?.name}
         </h1>
         <p className="py-2 text-gray-700 font-semibold">
-          Category: <span className="font-normal">{product?.category}</span>
+          Category: <span className="font-normal">{product?.category_name}</span>
         </p>
         <p className="py-2 text-gray-700 font-semibold">
           Status: <span className="font-normal">{product?.status}</span>

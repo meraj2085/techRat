@@ -22,8 +22,13 @@ const userSlice = createSlice({
       const existing = state.products.find(
         (product) => product._id === action.payload._id
       );
+      const existingIndex = state.products.findIndex(
+        (product) => product.category === action.payload.category
+      );
       if (existing) {
         return;
+      } else if (existingIndex !== -1) {
+        state.products.splice(existingIndex, 1, action.payload);
       } else {
         state.products.push(action.payload);
       }
