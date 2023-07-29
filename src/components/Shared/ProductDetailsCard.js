@@ -1,8 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import DroneImg from "@/assets/images/undraw_drone.png";
+import { useDispatch, useSelector } from "react-redux";
+import { setPcBuild } from "@/redux/features/user/userSlice";
 
 const ProductDetailsCard = ({ product }) => {
+  const dispatch = useDispatch();
+  const reduxState = useSelector((state) => state.user);
+
+  const handlePcBuild = () => {
+    dispatch(setPcBuild(product));
+  };
+
+  console.log(reduxState.products, "testingbro");
+
   return (
     <div className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg transition hover:shadow-xl min-h-96">
       <Image
@@ -48,7 +59,10 @@ const ProductDetailsCard = ({ product }) => {
           </div>
         </div>
         <div className="flex justify-end py-5">
-          <p className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-teal-500 rounded-xl group">
+          <div
+            onClick={() => handlePcBuild()}
+            className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-teal-500 rounded-xl group"
+          >
             <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-teal-600 rounded group-hover:-mr-4 group-hover:-mt-4">
               <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
             </span>
@@ -56,7 +70,7 @@ const ProductDetailsCard = ({ product }) => {
             <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
               Add To Builder
             </span>
-          </p>
+          </div>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ const Featured = ({ products }) => {
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-3 xl:grid-cols-3">
           {/* {isLoading && [1, 2, 3, 4].map((n) => <SkeletonCard key={n} />)} */}
           {products?.data?.map((product) => (
-            <ProductCard key={product?._d} product={product} />
+            <ProductCard key={product?._id} product={product} />
           ))}
         </div>
       </div>

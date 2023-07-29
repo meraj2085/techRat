@@ -5,6 +5,7 @@ const initialState = {
     email: null,
   },
   isLoading: false,
+  products: [],
 };
 
 const userSlice = createSlice({
@@ -17,9 +18,19 @@ const userSlice = createSlice({
     setLoading: (state, action) => {
       state.isLoading = action.payload;
     },
+    setPcBuild: (state, action) => {
+      const existing = state.products.find(
+        (product) => product._id === action.payload._id
+      );
+      if (existing) {
+        return;
+      } else {
+        state.products.push(action.payload);
+      }
+    },
   },
 });
 
-export const { setUser, setLoading } = userSlice.actions;
+export const { setUser, setLoading, setPcBuild } = userSlice.actions;
 
 export default userSlice.reducer;
