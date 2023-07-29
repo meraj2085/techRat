@@ -6,7 +6,7 @@ const Category = () => {
     {
       id: 1,
       name: "CPU / Processor",
-      value: "CPU / Processor",
+      value: "CPU_Processor",
       image_url: "/images/cpu.png",
     },
     {
@@ -19,13 +19,13 @@ const Category = () => {
     {
       id: 4,
       name: "Power Supply Unit",
-      value: "Power Supply Unit",
+      value: "Power_Supply_Unit",
       image_url: "/images/power.png",
     },
     {
       id: 5,
       name: "Storage Device",
-      value: "Storage Device",
+      value: "Storage_Device",
       image_url: "/images/storage.png",
     },
     {

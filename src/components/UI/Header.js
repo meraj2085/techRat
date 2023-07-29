@@ -11,28 +11,59 @@ const Header = () => {
   // dispatch(setUser("example@example.com"));
 
   // console.log(user, "testingbro");
+
+  const Categories = [
+    {
+      id: 1,
+      name: "CPU / Processor",
+      value: "CPU_Processor",
+    },
+    {
+      id: 2,
+      name: "Motherboard",
+      value: "Motherboard",
+    },
+    { id: 3, name: "RAM", value: "RAM" },
+    {
+      id: 4,
+      name: "Power Supply Unit",
+      value: "Power_Supply_Unit",
+    },
+    {
+      id: 5,
+      name: "Storage Device",
+      value: "Storage_Device",
+    },
+    {
+      id: 6,
+      name: "Monitor",
+      value: "Monitor",
+    },
+  ];
   return (
     <header className="bg-white mb-6">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
-            <p className="text-teal-600">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-brand-sentry"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3 18a1.93 1.93 0 0 0 .306 1.076a2 2 0 0 0 1.584 .924c.646 .033 -.537 0 .11 0h3a4.992 4.992 0 0 0 -3.66 -4.81c.558 -.973 1.24 -2.149 2.04 -3.531a9 9 0 0 1 5.62 8.341h4c.663 0 2.337 0 3 0a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-1.84 3.176c4.482 2.05 7.6 6.571 7.6 11.824"></path>
-              </svg>
-            </p>
+            <Link href="/">
+              <p className="text-teal-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="icon icon-tabler icon-tabler-brand-sentry"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M3 18a1.93 1.93 0 0 0 .306 1.076a2 2 0 0 0 1.584 .924c.646 .033 -.537 0 .11 0h3a4.992 4.992 0 0 0 -3.66 -4.81c.558 -.973 1.24 -2.149 2.04 -3.531a9 9 0 0 1 5.62 8.341h4c.663 0 2.337 0 3 0a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-1.84 3.176c4.482 2.05 7.6 6.571 7.6 11.824"></path>
+                </svg>
+              </p>
+            </Link>
           </div>
 
           <div className="md:flex md:items-center md:gap-12">
@@ -58,27 +89,16 @@ const Header = () => {
                       tabIndex={0}
                       className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
                     >
-                      <li>
-                        <a>CPU / Processor</a>
-                      </li>
-                      <li>
-                        <a>Motherboard</a>
-                      </li>
-                      <li>
-                        <a>RAM</a>
-                      </li>
-                      <li>
-                        <a>Power Supply Unit</a>
-                      </li>
-                      <li>
-                        <a>Storage Device</a>
-                      </li>
-                      <li>
-                        <a>Monitor</a>
-                      </li>
-                      <li>
-                        <a>Others</a>
-                      </li>
+                      {Categories.map((category) => (
+                        <Link
+                          key={category?.id}
+                          href={`/featured/${category.value}`}
+                        >
+                          <li>
+                            <p>{category.name}</p>
+                          </li>
+                        </Link>
+                      ))}
                     </ul>
                   </div>
                 </li>
