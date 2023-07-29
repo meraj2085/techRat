@@ -66,7 +66,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="md:flex md:items-center md:gap-12">
+          <div className="md:flex md:items-center md:gap-12 cursor-pointer">
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
@@ -102,6 +102,13 @@ const Header = () => {
                     </ul>
                   </div>
                 </li>
+                {session?.user?.email && (
+                  <li onClick={() => signOut()}>
+                    <p className="text-gray-500 transition hover:text-gray-500/75">
+                      Sign Out
+                    </p>
+                  </li>
+                )}
               </ul>
             </nav>
 
@@ -136,11 +143,13 @@ const Header = () => {
                     Login
                   </button>
                 )}
-                <Link href="/pcBuild">
-                  <button className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
-                    PC Build
-                  </button>
-                </Link>
+                {session?.user?.email && (
+                  <Link href="/pcBuild">
+                    <button className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
+                      PC Build
+                    </button>
+                  </Link>
+                )}
               </div>
 
               <div className="block md:hidden">
